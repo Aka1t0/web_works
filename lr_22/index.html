@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styleitog.css" rel="stylesheet">
+    <title>Итоговая форма</title>
+</head>
+<body>
+    <form  oninput="ratesoutput.value = ratescount.value" action="../index.html" method="post">
+        <fieldset>
+        <legend>Личные данные</legend>  
+            <div class="half-width">
+                <label for="id_review">ID отзыва</label>
+                <input type="number" value="12345" disabled id="id_review">
+            </div>
+            <div class="half-width">
+                <label for="tourist_name">Имя путешественника</label>
+                <input type="text" value="Кекс" id="tourist_name">
+            </div>
+        </fieldset>    
+
+        <fieldset>
+        <legend>Отзыв о поездке</legend>    
+            <div class="half-width">
+                <label for="country">Страна визита</label>
+                <input type="text" value="Норвегия" id="country">
+            </div>
+
+            <div class="half-width">
+                <label for="city">Город</label>
+                <select id="city" name="city">
+                    <option value="Осло" selected>Осло</option>
+                    <option value="Торонто">Торонто</option>
+                    <option value="Андорра">Андорра</option>
+                    <option value="Есентуки">Есентуки</option>
+                </select>
+            </div>
+
+            <div class="half-width">
+                <label for="ratescount">Оценка поездки</label>
+                <span>0 <input type="range" id="ratescount" min="0" max="10" value="10"> 10</span>
+            </div>
+            
+            <output class="output-area" name="ratesoutput">10</output>
+            
+            <label for="text_review">Текст отзыва</label>
+            <textarea rows="5" id="text_review">Это было просто мяу!</textarea>
+        </fieldset>
+
+        <fieldset>
+        <legend>Оценка отеля</legend>
+            <div class="half-width">
+                <label for="hotel">Название отеля</label>
+                <input type="text" id="hotel" placeholder="Название по-английски"
+                pattern="^[A-Za-z0-9]+$">
+            </div>
+
+            <div class="half-width">
+                <label for="arrival">Дата въезда</label>
+                <input type="text" id="arrival" placeholder="В формате дд-мм-гггг"
+                pattern="[1-31]{2}-[1-12]{2}-[0000-9999]{4}">
+            </div>
+      
+            <div class="one-third-width">
+                <label for="color_bed">Цвет кроватки</label>
+                <input type="color" id="color_bed" value="#ff0000">
+            </div>
+
+            <div class="two-third-width">
+                <label for="rate_eats">Оценка обедов</label>
+                <select id="rate_eats" name="rate_eats">
+                    <option value="1">Гордона Рамзи на вас нет</option>
+                    <option value="2">Ужас</option>
+                    <option value="3">На разок</option>
+                    <option value="4">Почти идеально</option>
+                    <option value="5" selected>Подушечки оближешь</option>
+                </select>
+            </div>
+            
+            <label for="fishs">Самая вкусная рыба</label>
+            <select id="fishs" name="fishs" multiple>
+                    <option label="Норвежский лосось" selected>Норвежский лосось</option>
+                    <option value="Зубатка">Зубатка</option>
+                    <option value="Морской окунь" selected>Морской окунь</option>
+                    <option value="Карась">Карась</option>
+                    <option value="Зеркальный карп">Зеркальный карп</option>
+            </select>
+        </fieldset>
+        
+        <div class="buttons">
+            <input type="submit" value="Оценить">
+            <input type="reset" value="Сбросить">
+        </div>
+    </form>
+</body>
+</html>

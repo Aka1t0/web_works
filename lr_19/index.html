@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Форма доставки</title>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="user">Имя</label>
+        <input type="text" value="Кексик" id="user" name="username">
+
+        <label for="address">Адрес доставки</label>
+        <textarea id="address"  cols="30" rows="2" name="deliveryAddress">ул. Хвостенко, д. 1</textarea>
+        
+        <div class="half-width">
+            <label for="deliveryDate">Дата доставки</label>
+            <input type="date" value="2014-12-12" id="deliveryDate" name="deliveryDate">
+
+            <label for="food">Блюдо</label>
+            <input type="text" list="eats" id="food" value="Курочка" name="dishesChoice">
+            <datalist id="eats" name="eats">
+                <option value="Мясо"></option>
+                <option value="Рыба"></option>
+                <option value="Курочка"></option>
+                <option value="Индейка"></option>
+                <option value="Мыши"></option>
+                <option value="Молоко"></option>
+            </datalist>
+        </div>
+
+        <div class="half-width">
+            <label for="deliveryTime">Время доставки</label>
+            <input type="time" value="12:00" id="deliveryTime" name="deliveryTime">
+
+            <label for="quantity">Количество</label>
+            <input min="5" max="50" step="5" type="number" value="5" id="quantity" name="quantity">
+        </div>
+
+        <div class="buttons">
+            <input type="submit" value="Заказать">
+        </div>
+    </form>
+</body>
+</html>
