@@ -1,0 +1,97 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;    
+  background: #134d12 url(../img/fabric.png) 0 0;
+  line-height: 30px;
+}
+
+body {
+  min-width: 550px;
+  min-height: 290px;
+  padding: 10px;
+}
+
+.two-cards {
+  width: 350px;
+  height: 250px;
+  padding: 10px;
+  text-align: center;
+}
+
+.two-cards div {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 180px;
+  margin: 0 10px;
+  margin-top: 30px;
+  vertical-align: middle;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+  background-size: 50px auto;
+}
+
+.ace-heart {
+  background: url(../img/heart.svg) no-repeat 50% 50%;
+
+}
+
+.two-spade{
+  background: url(../img/spade.svg) no-repeat 50% 50%;
+
+}
+
+.ace-heart::before, .ace-heart::after{
+  content: "A";
+  font-size: 30px;
+  color: #e50000;
+  position: absolute;
+  padding-bottom: 20px;
+
+  background: url(../img/heart.svg) no-repeat 50% 100%;
+  background-size: 25px auto;
+
+  font-weight: bold;
+  font-family:Arial, sans-serif;
+  font-size: 25px;
+}
+
+.two-spade::before, .two-spade::after {
+  content: "2";
+  font-size: 30px;
+  color: #000000;
+  position: absolute;
+  padding-bottom: 20px;
+
+  background: url(../img/spade.svg) no-repeat 50% 100%;
+  background-size: 25px auto;
+
+  font-weight: bold;
+  font-family:Arial, sans-serif;
+  font-size: 25px;
+}
+
+.ace-heart::before, .two-spade::before {
+  left: 5px;
+  top: 5px;
+}
+
+.ace-heart::after, .two-spade::after {
+  right: 5px;
+  bottom: 5px;
+  transform: rotate(180deg);
+}
+/* Ширина иконок, не изменяйте */
+.two-cards div::before,
+.two-cards div::after {
+  width: 20px;
+}
+
+/* Поворот нижней иконки */
+.two-cards div::after {
+  transform: rotate(180deg);
+}
+
