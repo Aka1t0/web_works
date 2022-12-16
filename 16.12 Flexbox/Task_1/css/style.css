@@ -1,0 +1,21 @@
+.exam {
+    background: url("../img/pattern.png");
+}
+
+.palette {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+.color-4 { /** 2 **/
+    align-self: flex-start;
+}
+
+.color-6 { /** 3 **/
+    align-self: center;
+}
+
+.color-2 { /** 4 **/
+    align-self: flex-end;
+}

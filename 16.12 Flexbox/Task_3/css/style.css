@@ -1,0 +1,52 @@
+.exam {
+    background: url("../img/pattern.png");
+}
+
+/* Third palette (and rules for other) */
+.part, .palette-small{
+    display: flex;
+    justify-content: space-between;
+}
+
+.part {
+    justify-content: space-between;
+    flex-direction: column;
+}
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+/* Fourth palette*/
+.palette-box:last-of-type .part:last-of-type {
+    flex-direction: column-reverse;
+}
+
+.palette-box:last-of-type .part:first-of-type {
+    flex-direction: row;
+}
+/*^^^^^^^^^^^^^^^*/
+
+/* Second palette*/
+.palette-box:nth-of-type(2) .palette-small{
+    flex-direction: column-reverse;
+    align-items: flex-start;
+}
+
+.palette-box:nth-of-type(2) .color-2, .color-6{
+    align-self: flex-end;
+}
+/*^^^^^^^^^^^^^^^*/
+
+/* First palette */
+.palette-box:first-of-type .palette-small{
+    flex-direction: column-reverse;
+}
+
+.palette-box:first-of-type .color-3 {
+    order: 2;
+    align-self: center;
+}
+
+.palette-box:first-of-type .color-4 {
+    order: -1;
+    align-self: center;
+}
+/*^^^^^^^^^^^^^^^*/
